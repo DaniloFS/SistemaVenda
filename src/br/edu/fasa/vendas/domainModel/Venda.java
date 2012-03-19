@@ -4,48 +4,62 @@
  */
 package br.edu.fasa.vendas.domainModel;
 
+import java.util.Date;
+
 /**
  *
  * @author Danilo Fernandes
  */
 public class Venda {
     private int codigo;
-    private int cliente;
-    private String data;
+    private Cliente c = new Cliente ();
+    private Date data;
     
     public Venda(){
         
     }
-    public Venda (int c,int cl, String d){
-         
-        codigo=c;
-        cliente=cl;
-        data=d;
-        
-    }
 
-    public int getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(int cliente) {
-        this.cliente = cliente;
-    }
-
+    /**
+     * @return the codigo
+     */
     public int getCodigo() {
         return codigo;
     }
 
+    /**
+     * @param codigo the codigo to set
+     */
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
-    public String getData() {
+    /**
+     * @return the c
+     */
+    public Cliente getC() {
+        return c;
+    }
+
+    /**
+     * @param c the c to set
+     */
+    public void setC(Cliente c) {
+        this.c = c;
+    }
+
+    /**
+     * @return the data
+     */
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    /**
+     * @param data the data to set
+     */
+    public void setData(Date data) {
         this.data = data;
     }
+    
     
 }
